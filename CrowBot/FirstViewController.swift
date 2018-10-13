@@ -8,10 +8,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerView.delegate = self
+        pickerView.datasource = self
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
